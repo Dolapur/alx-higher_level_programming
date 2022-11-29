@@ -3,5 +3,6 @@
 def uppercase(str):
     for i in str:
         if ord(i) >= 65 and ord(i) <= 90:
-            print("{}".format(chr(ord(i) - 32)), end="")
+            i = chr(ord(i) - 32)
+            print("{}".format(i), end="")
     print("")
