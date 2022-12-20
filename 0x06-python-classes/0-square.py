@@ -2,5 +2,4 @@
 
 class square:
     ''' defines a square'''
-
-    pass #emptyblock
+    pass
