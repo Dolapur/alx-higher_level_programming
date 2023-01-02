@@ -67,3 +67,11 @@ class Rectangle:
                 if column != self.__height - 1:
                     rectangle.append("\n")
         return ("".join(rectangle))
+
+    def __repr__(self):
+        """Return the string representation of the Rectangle."""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a message for every object that is deleted"""
+        print("Bye rectangle...")
