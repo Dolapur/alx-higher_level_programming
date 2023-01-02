@@ -4,6 +4,8 @@
 
 class Rectangle:
     """An class Rectangle that defines a rectangle"""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initializing this rectangle class
         Args:
@@ -15,6 +17,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -54,7 +57,7 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
         """
@@ -69,4 +72,10 @@ class Rectangle:
         return ("".join(rectangle))
 
     def __repr__(self):
+        """Return the string representation of the Rectangle."""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a message for every object that is deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
