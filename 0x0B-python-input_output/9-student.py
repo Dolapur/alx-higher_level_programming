@@ -3,7 +3,7 @@
 
 
 class Student:
-    """A class that defines a student""" 
+    """A class that defines a student"""
     def __init__(self, first_name, last_name, age):
         """Initializes a new Student
         """

@@ -3,7 +3,7 @@
 
 
 class Student:
-    """A class that defines a student""" 
+    """A class that defines a student"""
     def __init__(self, first_name, last_name, age):
         """Initializes a new Student
         """
@@ -17,6 +17,6 @@ class Student:
         included in the list
         """
         if (type(attrs) == list and
-            all(type(ele) == str for ele in attrs)):
+                all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
